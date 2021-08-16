@@ -27,11 +27,10 @@ namespace AreaCalculator
 
         public bool IsTriangleRight()
         {
-            bool result = (Side_A * Side_A + Side_B * Side_B == Side_C * Side_C) 
-                || (Side_A * Side_A + Side_C * Side_C == Side_B * Side_B) 
-                || (Side_B * Side_B + Side_C * Side_C == Side_A * Side_A);
+            if ((Side_A * Side_A + Side_B * Side_B == Side_C * Side_C) || (Side_A * Side_A + Side_C * Side_C == Side_B * Side_B) || (Side_C * Side_C + Side_B * Side_B == Side_A * Side_A)) 
+                return true;
 
-            return result;
+            return false;
         }
     }
 
